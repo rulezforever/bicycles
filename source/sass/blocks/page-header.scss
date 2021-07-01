@@ -1,0 +1,31 @@
+.page-header {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  min-height: 62px;
+  background-color: burlywood;
+
+  @media (max-width: $tablet-width) {
+    min-height: 50px;
+  }
+
+  // @media (max-width: $mobile-width) {
+  //   min-height: 50px;
+  // }
+}
+
+.page-header__logo {
+  @media (max-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.page-header__logo-img {
+  @media (max-width: $tablet-width) {
+    width: 44px;
+    height: 22px;
+  }
+}

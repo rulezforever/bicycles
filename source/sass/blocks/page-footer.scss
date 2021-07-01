@@ -1,0 +1,227 @@
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.page-footer__list {
+  @include list-reset;
+
+  &--one {
+    @media (max-width: $mobile-width) {
+      width: 46%;
+      text-align: center;
+    }
+  }
+
+  &--two {
+    @media (max-width: $mobile-width) {
+      width: 46%;
+      text-align: center;
+    }
+  }
+
+  &--three {
+    @media (max-width: $mobile-width) {
+      width: 46%;
+      text-align: center;
+      margin-top: 22px;
+    }
+  }
+}
+
+.page-footer__lists-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    justify-content: space-evenly;
+  }
+}
+
+.page-footer__contacts-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+.page-footer__corporate-title {
+  @include font-set(18px, 32px, 600);
+  color: $deep-dark;
+  width: auto;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.page-footer__trip-title,
+.page-footer__contacts-title,
+.page-footer__corporate-title {
+  @include font-set(18px, 32px, 600);
+  color: $deep-dark;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
+}
+
+.page-footer__corporate-description {
+  @include font-set(14px, 170%, 400);
+  width: 98%;
+  padding-top: 5px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    padding: 0 19px;
+    width: 95%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.page-footer__corporate,
+.page-footer__contacts,
+.page-footer__trip {
+  width: 30%;
+}
+
+.page-footer__corporate {
+  width: 28%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -50px;
+    width: 1px;
+    height: 189px;
+    background-color: $grey2;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 32px;
+    padding-top: 15px;
+    margin-left: 19px;
+    margin-right: 19px;
+    width: 100%;
+    border-top: 1px solid $grey2;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92%;
+    margin-top: 12px;
+    padding: 0 3px;
+    padding-top: 12px;
+    border-top: 1px solid $grey2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.page-footer__contacts {
+  width: 27%;
+  padding-left: 102px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 1px;
+    height: 189px;
+    background-color: $grey2;
+
+    @media (max-width: $tablet-width) {
+      height: 177px;
+      left: -52px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    width: 39%;
+    margin-left: 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92%;
+    margin-top: 21px;
+    padding-top: 10px;
+    border-top: 1px solid $grey2;
+  }
+}
+
+.page-footer__trip {
+  padding-left: 13px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 20px;
+    width: 45%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92%;
+    padding: 0 12px;
+  }
+}
+
+.page-footer__item {
+  @include font-set(14px, 25px, 400);
+  color: $deep-dark;
+  opacity: 50%;
+}
+
+.page-footer__mailto {
+  @include font-set(14px, auto, 400);
+  color: $basic;
+  position: relative;
+  padding-left: 39px;
+}
+
+.page-footer__mailto-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: transparent;
+
+  @media (max-width: $mobile-width) {
+    left: 20px;
+  }
+}
+
+.page-footer__phone {
+  @include font-set(16px, 32px, 400);
+  color: $basic;
+  position: relative;
+  padding-left: 39px;
+  padding-top: 21px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+  }
+}
+
+.page-footer__phone-icon {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  fill: transparent;
+
+  @media (max-width: $mobile-width) {
+    left: 48px;
+  }
+}
