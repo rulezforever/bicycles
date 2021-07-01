@@ -29,8 +29,10 @@
 }
 
 .main-nav__item a {
-  @include font-set(14px, auto, 500);
-  color: $deep-dark;
+  @include font-set(16px, 32px, 300);
+  letter-spacing: -0.5%;
+  opacity: 0.7;
+  color: $white;
   margin-left: 40px;
 
   &:hover,

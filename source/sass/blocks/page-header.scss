@@ -1,12 +1,19 @@
 .page-header {
   padding: 0;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  min-height: 62px;
-  background-color: burlywood;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-content: center;
+  min-height: 825px;
+  background-image: url("../img/bicycle-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bicycle-desktop@2x.jpg");
+  }
 
   @media (max-width: $tablet-width) {
     min-height: 50px;
