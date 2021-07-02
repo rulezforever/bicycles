@@ -1,10 +1,27 @@
 .promo {
   color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 170px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    gap: 145px;
+  }
 }
 
 .promo__title {
   @include font-set(46px, 64px, 700);
   letter-spacing: -0.5%;
+  margin: 0 0 25px;
+  width: 380px;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(30px, 42px, 700);
+    width: auto;
+    text-align: center;
+    margin: 0 0 20px;
+  }
 }
 
 .promo__slogan {
@@ -12,20 +29,39 @@
   letter-spacing: -0.5%;
   opacity: 0.8;
   max-width: 381px;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(18px, 32px, 300);
+    text-align: center;
+    width: auto;
+    max-width: 430px;
+  }
 }
 
 .promo__selection {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  // justify-content: space-between;
-  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    align-content: center;
+  }
 }
 
 .promo__header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   box-sizing: border-box;
   padding-left: 280px;
-  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    width: 100%;
+    align-content: center;
+  }
 }
 
 .promo__selection-form {
@@ -43,6 +79,16 @@
   max-width: 327px;
   margin: 0;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  margin-left: 3px;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(18px, 28px,600);
+    color: $black;
+    max-width: 324px;
+    margin-bottom: 30px;
+  }
 }
 
 .promo__input {
@@ -58,6 +104,10 @@
     opacity: 0.5;
     box-sizing: border-box;
     padding-left: 30px;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 24px;
+    }
   }
 }
 
@@ -73,5 +123,12 @@
 .promo__container {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
+}
+
+.promo__logo {
+  margin-bottom: 25px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
