@@ -8,6 +8,11 @@
     flex-direction: column;
     gap: 145px;
   }
+
+  @media (max-width: $mobile-width) {
+
+    gap: 135px;
+  }
 }
 
 .promo__title {
@@ -21,6 +26,10 @@
     width: auto;
     text-align: center;
     margin: 0 0 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 288px;
   }
 }
 
@@ -37,6 +46,10 @@
     width: auto;
     max-width: 430px;
   }
+
+  @media (max-width: $mobile-width) {
+    max-width: 288px;
+  }
 }
 
 .promo__selection {
@@ -46,7 +59,7 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
-    align-content: center;
+    align-items: center;
   }
 }
 
@@ -70,6 +83,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .promo__selection-title {
@@ -86,8 +104,12 @@
   @media (max-width: $tablet-width) {
     @include font-set(18px, 28px,600);
     color: $black;
-    max-width: 324px;
+    width: 100%;
     margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -97,6 +119,14 @@
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 327px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 42%;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 90%;
+  }
 
   &::placeholder {
     @include font-set(15px, 24px, 400);
@@ -115,9 +145,18 @@
   @include font-set(15px, 21px, 600);
   text-align: center;
   background-color: $green;
+  border: none;
   border-radius: 6px;
   max-width: 327px;
   min-height: 51px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 42%;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 90%;
+  }
 }
 
 .promo__container {

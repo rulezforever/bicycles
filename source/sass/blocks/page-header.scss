@@ -26,6 +26,19 @@
       background-image: url("../img/bicycle-tablet@2x.jpg");
     }
   }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bicycle-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 390px;
+    max-height: 390px;
+    gap: 71px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bicycle-mobile@2x.jpg");
+    }
+  }
 }
 
 .page-header__logo {
