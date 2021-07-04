@@ -5,39 +5,53 @@
   padding: 0;
   margin: 0 auto;
   min-height: 825px;
-  background-image: url("../img/bicycle-desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/bicycle-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    width: 1440px;
+    height: 825px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/bicycle-desktop@2x.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bicycle-desktop@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/bicycle-tablet@1x.jpg");
+      width: 100%;
+      height: 340px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bicycle-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/bicycle-mobile@1x.jpg");
+      width: 100%;
+      height: 390px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bicycle-mobile@2x.jpg");
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/bicycle-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 340px;
-    max-height: 340px;
     gap: 84px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bicycle-tablet@2x.jpg");
-    }
+    min-height: 720px;
   }
 
   @media (max-width: $mobile-width) {
-    background-image: url("../img/bicycle-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 390px;
-    max-height: 390px;
     gap: 71px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bicycle-mobile@2x.jpg");
-    }
+    min-height: 780px;
   }
 }
 
