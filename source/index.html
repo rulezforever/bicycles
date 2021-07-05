@@ -27,16 +27,16 @@
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="">О нас</a>
+          <a href="#facts">О нас</a>
         </li>
         <li class="main-nav__item">
-          <a href="">Виды велосипедов</a>
+          <a href="#kinds">Виды велосипедов</a>
         </li>
         <li class="main-nav__item">
-          <a href="">Видео про велосипеды</a>
+          <a href="#video">Видео про велосипеды</a>
         </li>
         <li class="main-nav__item">
-          <a href="">Контакты</a>
+          <a href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -63,7 +63,8 @@
   </header>
 
   <main class="page-main">
-    <section class="facts">
+    <section class="facts" id="facts">
+      <div class="wrapper">
       <h2 class="facts__title">Несколько фактов о нас</h2>
       <ul class="facts__list">
         <li class="facts__item">
@@ -79,9 +80,56 @@
           <p class="facts__item-text">Профессиональные консультации!</p>
         </li>
       </ul>
+    </div>
+    </section>
+
+    <section class="kinds wrapper" id="kinds">
+      <h2 class="kinds__title">Виды велосипедов</h2>
+      <ul class="kinds__list">
+        <li class="kinds__item">
+          <a class="kinds__picture" href="#">
+            <picture>
+              <source media="(max-width: 767px)" type="image/webp" srcset="img/road-mobile@1x.webp 1x, img/road-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" type="image/webp"srcset="img/road-tablet@1x.webp 1x, img/road-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)" type="image/webp"srcset="img/road-desktop@1x.webp 1x, img/road-desktop@2x.webp 2x">
+              <img src="img/road-desktop@1x.jpg" srcset="img/road-desktop@2x.jpg 2x" width="342" height="503"
+                alt="Дорожный велосипед" class="kinds__image">
+            </picture>
+          </a>
+          <p class="kinds__name">Дорожный велосипед</p>
+        </li>
+        <li class="kinds__item">
+          <a class="kinds__picture" href="#">
+            <picture>
+              <source media="(max-width: 767px)" type="image/webp" srcset="img/mountain-mobile@1x.webp 1x, img/mountain-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" type="image/webp"srcset="img/mountain-tablet@1x.webp 1x, img/mountain-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)" type="image/webp"srcset="img/mountain-desktop@1x.webp 1x, img/mountain-desktop@2x.webp 2x">
+              <img src="img/mountain-desktop@1x.jpg" srcset="img/mountain-desktop@2x.jpg 2x" width="342" height="566"
+                alt="Горный велосипед" class="kinds__image">
+            </picture>
+          </a>
+          <p class="kinds__name">Горный велосипед</p>
+        </li>
+        <li class="kinds__item">
+          <a class="kinds__picture" href="#">
+            <picture>
+              <source media="(max-width: 767px)" type="image/webp" srcset="img/kids-mobile@1x.webp 1x, img/kids-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" type="image/webp"srcset="img/kids-tablet@1x.webp 1x, img/kids-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)" type="image/webp"srcset="img/kids-desktop@1x.webp 1x, img/kids-desktop@2x.webp 2x">
+              <img src="img/kids-desktop@1x.jpg" srcset="img/kids-desktop@2x.jpg 2x" width="342" height="513"
+                alt="Детский велосипед" class="kinds__image">
+            </picture>
+          </a>
+          <p class="kinds__name">Детский велосипед</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video" id="video">
+
     </section>
   </main>
-  <footer class="page-footer wrapper">
+  <footer class="page-footer wrapper" id="contacts">
     <h2 class="page-footer__title">Как нас найти?</h2>
     <p class="page-footer__slogan">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     <div class="page-footer__map">
