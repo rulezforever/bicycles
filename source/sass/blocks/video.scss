@@ -3,11 +3,21 @@
   letter-spacing: -0.5%;
   background-image: linear-gradient(to bottom, $black3, 706px, transparent 706px);
   background-size: auto;
-  // background-color: $black3;
-  // background-size: 706px auto;
   min-height: 804px;
   box-sizing: border-box;
   padding-top: 120px;
+  margin-bottom: 55px;
+
+  @media (max-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $black3, 413px, transparent 413px);
+    padding-top: 70px;
+    min-height: 540px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: linear-gradient(to bottom, $black3, 384px, transparent 384px);
+    padding-top: 85px;
+  }
 }
 
 .video__title {
@@ -15,6 +25,10 @@
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(24px, 30px, 600);
+  }
 }
 
 .video__slogan {
@@ -24,8 +38,60 @@
   text-align: center;
   width: 340px;
   margin-bottom: 56px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+    width: 430px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 289px;
+    margin-bottom: 52px;
+  }
 }
 
 .video__image {
-  margin: 0  255px;
+  margin: 0 255px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: 282px;
+    margin: 0;
+    object-fit: contain;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 162px;
+    margin: 0;
+    object-fit: contain;
+  }
+}
+
+.video__play-img {
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    width: 91px;
+    height: 91px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.video__play {
+  display: block;
+  text-align: center;
+  transform: translateY(-300px);
+
+  @media (max-width: $tablet-width) {
+    transform: translateY(-190px);
+  }
+
+  @media (max-width: $mobile-width) {
+    transform: translateY(-118px);
+  }
 }

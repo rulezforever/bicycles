@@ -6,6 +6,12 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
+    padding-bottom: 0;
+    min-height: 948px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 55px;
   }
 }
 
