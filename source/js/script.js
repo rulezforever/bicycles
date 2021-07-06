@@ -25,3 +25,21 @@ for (let anchor of anchors) {
   })
   })
 }
+
+
+//--- input validation
+
+const inputElement = document.querySelector('.promo__input--phone');
+const symbolsPattern = /^[0-9]+$/;
+
+const checkValidation = () => {
+  const value = inputElement.value
+  if (!symbolsPattern.test(value)) {
+    inputElement.setCustomValidity('Нельзя вводить буквы - введите числа!');
+  } else {
+    inputElement.setCustomValidity('');
+  }
+  inputElement.reportValidity();
+}
+
+inputElement.addEventListener('input', checkValidation);

@@ -1,3 +1,14 @@
+.video {
+  @media (max-width: $tablet-width) {
+    height: 508px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 450px;
+  }
+}
+
 .video .wrapper {
   color: $white;
   letter-spacing: -0.5%;
@@ -11,7 +22,7 @@
   @media (max-width: $tablet-width) {
     background-image: linear-gradient(to bottom, $black3, 413px, transparent 413px);
     padding-top: 70px;
-    min-height: 540px;
+    margin-bottom: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -76,7 +87,7 @@
     height: 91px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     width: 65px;
     height: 65px;
   }
