@@ -19,10 +19,12 @@
 }
 
 .page-header__logo {
-  display: none;
+  position: absolute;
+  top: 318px;
+  left: 280px;
 
   @media (max-width: $tablet-width) {
-    display: block;
+    position: static;
     padding-top: 24px;
     padding-left: 22px;
   }

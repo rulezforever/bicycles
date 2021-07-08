@@ -141,10 +141,12 @@ img {
       min-height: 780px; } }
 
 .page-header__logo {
-  display: none; }
+  position: absolute;
+  top: 318px;
+  left: 280px; }
   @media (max-width: 1023px) {
     .page-header__logo {
-      display: block;
+      position: static;
       padding-top: 24px;
       padding-left: 22px; } }
 
@@ -305,9 +307,6 @@ img {
       margin: 0;
       justify-content: space-between;
       min-height: 50px; } }
-  @media (max-width: 767px) {
-    .main-nav {
-      width: 100%; } }
 
 .main-nav__list {
   list-style: none;
@@ -318,6 +317,9 @@ img {
   flex-wrap: wrap;
   gap: 135px;
   position: relative; }
+  @media (max-width: 1023px) {
+    .main-nav__list {
+      display: none; } }
   .main-nav__list::after {
     position: absolute;
     content: "";
@@ -332,15 +334,7 @@ img {
         display: none; } }
   @media (max-width: 1023px) {
     .main-nav__list {
-      width: 320px;
-      height: 568px;
-      background-color: white;
-      position: absolute;
-      top: 0;
-      right: 0;
-      gap: 30px;
-      padding-top: 100px;
-      display: none; } }
+      background-color: white; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -404,26 +398,18 @@ img {
     .main-nav__toggle {
       display: block; } }
 
-.main-nav--nojs .main-nav__list {
-  display: flex; }
-
+.main-nav--nojs .main-nav__list,
 .main-nav--opened .main-nav__list {
   display: flex; }
-  @media (min-width: 1023px) {
-    .main-nav--opened .main-nav__list {
-      display: flex; } }
 
 .main-nav--opened .main-nav__toggle,
 .main-nav--nojs .main-nav__toggle {
-  top: 15px;
-  right: 0;
-  z-index: 2;
-  background-color: transparent; }
+  background-color: white; }
   .main-nav--opened .main-nav__toggle::before,
   .main-nav--nojs .main-nav__toggle::before {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 0;
     width: 30px;
     height: 1px;
@@ -434,7 +420,7 @@ img {
   .main-nav--nojs .main-nav__toggle::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 5px;
     width: 30px;
     height: 1px;
@@ -664,7 +650,9 @@ img {
   font-weight: 700;
   letter-spacing: -0.5%;
   margin: 0 0 25px;
-  width: 380px; }
+  width: 380px;
+  box-sizing: border-box;
+  padding-top: 50px; }
   @media (max-width: 1023px) {
     .promo__title {
       font-size: 30px;
@@ -672,7 +660,8 @@ img {
       font-weight: 700;
       width: auto;
       text-align: center;
-      margin: 0 0 20px; } }
+      margin: 0 0 20px;
+      padding-top: 0; } }
   @media (max-width: 767px) {
     .promo__title {
       max-width: 288px; } }
