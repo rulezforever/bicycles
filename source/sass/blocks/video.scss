@@ -95,8 +95,10 @@
 
 .video__play {
   display: block;
-  text-align: center;
   transform: translateY(-300px);
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
 
   @media (max-width: $tablet-width) {
     transform: translateY(-190px);

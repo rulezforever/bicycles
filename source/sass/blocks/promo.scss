@@ -115,10 +115,10 @@
 
 .promo__input {
   height: 48px;
+  max-width: 327px;
   border: 1px solid $grey;
   box-sizing: border-box;
   border-radius: 6px;
-  max-width: 327px;
 
   @media (max-width: $tablet-width) {
     min-width: 42%;

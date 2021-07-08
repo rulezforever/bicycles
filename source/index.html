@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bicycles</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-light.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-regular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-semibold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/opensans-bold.woff" as="font" crossorigin>
 </head>
 
 <body class="page-body">
@@ -54,8 +54,10 @@
         <h2 class="promo__selection-title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
         <form class="promo__selection-form" id="order" method="post" action="https://echo.htmlacademy.ru">
           <input class="promo__input" id="name" type="text" name="name" placeholder="Введите Ваше Имя" required>
-          <input class="promo__input promo__input--phone" id="phone" type="tel" name="phone" placeholder="Введите Ваш номер телефона"
-            required>
+          <label class="promo__label visually-hidden" for="name">Имя</label>
+          <input class="promo__input promo__input--phone" id="phone" type="tel" name="phone"
+            placeholder="Введите Ваш номер телефона" required>
+          <label class="promo__label visually-hidden" for="phone">Телефон</label>
           <button class="promo__button" type="submit">Подобрать велосипед мечты</button>
         </form>
       </div>
@@ -90,12 +92,18 @@
         <li class="kinds__item">
           <a class="kinds__picture" href="#">
             <picture>
-              <source media="(min-width: 320px)" type="image/webp"
+              <source media="(max-width: 767px)" type="image/webp"
                 srcset="img/road-mobile@1x.webp 1x, img/road-mobile@2x.webp 2x">
-              <source media="(min-width: 768px)" type="image/webp"
+              <!-- retina: 104kB; non-retina: 29kB  -->
+              <source media="(max-width: 767px)" type="image/jpeg"
+                srcset="img/road-mobile@1x.jpg 1x, img/road-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)" type="image/webp"
                 srcset="img/road-tablet@1x.webp 1x, img/road-tablet@2x.webp 2x">
-              <source media="(min-width: 1024px)" type="image/webp"
-                srcset="img/road-desktop@1x.webp 1x, img/road-desktop@2x.webp 2x">
+              <!-- retina: 104kB; non-retina: 29kB  -->
+              <source media="(max-width: 1023px)" type="image/jpeg"
+                srcset="img/road-tablet@1x.jpg 1x, img/road-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/road-desktop@1x.webp 1x, img/road-desktop@2x.webp 2x">
+              <!-- retina: 147kB; non-retina: 39kB  -->
               <img src="img/road-desktop@1x.jpg" srcset="img/road-desktop@2x.jpg 2x" width="342" height="503"
                 alt="Дорожный велосипед" class="kinds__image">
             </picture>
@@ -107,10 +115,16 @@
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="img/mountain-mobile@1x.webp 1x, img/mountain-mobile@2x.webp 2x">
+              <!-- retina: 58kB; non-retina: 17kB  -->
+              <source media="(max-width: 767px)" type="image/jpeg"
+                srcset="img/mountain-mobile@1x.jpg 1x, img/mountain-mobile@2x.jpg 2x">
               <source media="(max-width: 1023px)" type="image/webp"
                 srcset="img/mountain-tablet@1x.webp 1x, img/mountain-tablet@2x.webp 2x">
-              <source media="(min-width: 1024px)" type="image/webp"
-                srcset="img/mountain-desktop@1x.webp 1x, img/mountain-desktop@2x.webp 2x">
+              <!-- retina: 58kB; non-retina: 17kB  -->
+              <source media="(max-width: 1023px)" type="image/jpeg"
+                srcset="img/mountain-tablet@1x.jpg 1x, img/mountain-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/mountain-desktop@1x.webp 1x, img/mountain-desktop@2x.webp 2x">
+              <!-- retina: 102kB; non-retina: 30kB  -->
               <img src="img/mountain-desktop@1x.jpg" srcset="img/mountain-desktop@2x.jpg 2x" width="342" height="566"
                 alt="Горный велосипед" class="kinds__image">
             </picture>
@@ -122,10 +136,16 @@
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="img/kids-mobile@1x.webp 1x, img/kids-mobile@2x.webp 2x">
+              <!-- retina: 64kB; non-retina: 19kB  -->
+              <source media="(max-width: 767px)" type="image/jpeg"
+                srcset="img/kids-mobile@1x.jpg 1x, img/kids-mobile@2x.jpg 2x">
               <source media="(max-width: 1023px)" type="image/webp"
                 srcset="img/kids-tablet@1x.webp 1x, img/kids-tablet@2x.webp 2x">
-              <source media="(min-width: 1024px)" type="image/webp"
-                srcset="img/kids-desktop@1x.webp 1x, img/kids-desktop@2x.webp 2x">
+              <!-- retina: 64kB; non-retina: 19kB  -->
+              <source media="(max-width: 1023px)" type="image/jpeg"
+                srcset="img/kids-tablet@1x.jpg 1x, img/kids-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/kids-desktop@1x.webp 1x, img/kids-desktop@2x.webp 2x">
+              <!-- retina: 124kB; non-retina: 39kB  -->
               <img src="img/kids-desktop@1x.jpg" srcset="img/kids-desktop@2x.jpg 2x" width="342" height="513"
                 alt="Детский велосипед" class="kinds__image">
             </picture>
@@ -142,16 +162,22 @@
         <picture>
           <source media="(max-width: 767px)" type="image/webp"
             srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+          <!-- retina: 11kB; non-retina: 4kB  -->
+          <source media="(max-width: 767px)" type="image/jpeg"
+            srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x">
           <source media="(max-width: 1023px)" type="image/webp"
             srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-          <source media="(min-width: 1024px)" type="image/webp"
-            srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+          <!-- retina: 27kB; non-retina: 8kB  -->
+          <source media="(max-width: 1023px)" type="image/jpeg"
+            srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+          <!-- retina: 72kB; non-retina: 23kB  -->
           <img src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="929" height="522"
             alt="Видео про велосипеды" class="video__image">
         </picture>
-        <a class="video__play" href="#">
+        <button class="video__play" type="button" aria-label="Воспроизвести видео">
           <img class="video__play-img" src="img/icons/play.svg" width="65" height="65" alt="Кнопка Play">
-        </a>
+        </button>
       </div>
     </section>
   </main>
@@ -178,7 +204,7 @@
       </a>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
