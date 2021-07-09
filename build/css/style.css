@@ -137,7 +137,8 @@ img {
       margin-bottom: 85px; } }
   @media (max-width: 767px) {
     .page-header {
-      gap: 71px; } }
+      gap: 71px;
+      margin-bottom: 70px; } }
 
 .page-header__logo {
   position: absolute;
@@ -635,8 +636,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 170px;
-  margin-bottom: 240px;
-  min-width: 932px; }
+  margin-bottom: 240px; }
   @media (max-width: 1023px) {
     .promo {
       flex-direction: column;
@@ -644,7 +644,8 @@ img {
       gap: 145px; } }
   @media (max-width: 767px) {
     .promo {
-      gap: 135px; } }
+      gap: 135px;
+      margin-bottom: 30px; } }
 
 .promo__title {
   font-size: 46px;
@@ -921,8 +922,8 @@ img {
           right: -25px; } }
       @media (max-width: 1023px) {
         .kinds__item:nth-of-type(3)::before {
-          top: -19px;
-          right: -14px; } }
+          top: -20px;
+          right: -25px; } }
 
 .kinds__name {
   font-size: 22px;

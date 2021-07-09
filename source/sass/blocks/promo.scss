@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   gap: 170px;
   margin-bottom: 240px;
-  min-width: 932px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -14,6 +13,7 @@
 
   @media (max-width: $mobile-width) {
     gap: 135px;
+    margin-bottom: 30px;
   }
 }
 
