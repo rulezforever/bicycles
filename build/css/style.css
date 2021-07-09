@@ -635,7 +635,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 170px;
-  margin-bottom: 240px; }
+  margin-bottom: 240px;
+  min-width: 932px; }
   @media (max-width: 1023px) {
     .promo {
       flex-direction: column;
