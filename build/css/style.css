@@ -115,6 +115,8 @@ img {
   @media (max-width: 767px) and (min-resolution: 2dppx) {
     .page::before {
       background-image: url("../img/bicycle-mobile@2x.jpg"); } }
+  .page--menu-opened::before {
+    background-image: none; }
 
 .page-body {
   margin: 0 auto;
@@ -301,6 +303,8 @@ img {
   align-items: center;
   margin-left: 302px;
   min-height: 75px; }
+  .main-nav--opened {
+    flex-direction: column; }
   @media (max-width: 1023px) {
     .main-nav {
       width: 100%;
@@ -404,7 +408,8 @@ img {
 
 .main-nav--opened .main-nav__toggle,
 .main-nav--nojs .main-nav__toggle {
-  background-color: white; }
+  background-color: white;
+  align-self: flex-end; }
   .main-nav--opened .main-nav__toggle::before,
   .main-nav--nojs .main-nav__toggle::before {
     content: "";
@@ -426,6 +431,10 @@ img {
     height: 1px;
     background-color: rgba(20, 21, 23, 0.2);
     transform: rotate(-45deg); }
+
+.main-nav--opened .page-header__logo,
+.main-nav--nojs .page-header__logo {
+  display: none; }
 
 .facts {
   width: 100%;

@@ -5,6 +5,10 @@
   margin-left: 302px;
   min-height: 75px;
 
+  &--opened {
+    flex-direction: column;
+  }
+
   @media (max-width: $tablet-width) {
     width: 100%;
     margin: 0;
@@ -124,6 +128,7 @@
 .main-nav--nojs .main-nav__toggle {
 
   background-color: $white;
+  align-self: flex-end;
 
   &::before {
     content: "";
@@ -147,4 +152,9 @@
     background-color: $modal3;
     transform: rotate(-45deg);
   }
+}
+
+.main-nav--opened .page-header__logo,
+.main-nav--nojs .page-header__logo {
+  display: none;
 }
