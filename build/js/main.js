@@ -47,4 +47,3 @@
   inputElement.addEventListener('input', checkValidation);
 
 })();
-
