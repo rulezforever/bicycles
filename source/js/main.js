@@ -35,7 +35,7 @@
   //--- input validation
 
   const inputElement = document.querySelector('.promo__input--phone');
-  const symbolsPattern = /^[0-9]+$/;
+  const symbolsPattern = /(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/;
 
   const checkValidation = () => {
     const value = inputElement.value

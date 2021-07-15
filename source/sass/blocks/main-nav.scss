@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: 302px;
+  margin-left: 282px;
   min-height: 75px;
 
   &--opened {
@@ -19,30 +19,38 @@
 
 .main-nav__list {
   @include list-reset;
-  padding: 0;
+  // padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 135px;
+  width: 874px;
+  // gap: 135px;
   position: relative;
+  box-sizing: border-box;
+  padding: 8px 0;
+  border-bottom: 1px solid $white-opacity;
+
 
   @media (max-width: $tablet-width) {
     display: none;
+    gap: 135px;
+    padding: 0;
+    border: none;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 40px;
-    left: -20px;
-    width: 874px;
-    height: 1px;
-    background-color: $white;
-    opacity: 0.2;
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: 40px;
+  //   left: -20px;
+  //   width: 874px;
+  //   height: 1px;
+  //   background-color: $white;
+  //   opacity: 0.2;
 
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
-  }
+  //   @media (max-width: $tablet-width) {
+  //     display: none;
+  //   }
+  // }
 
   @media (max-width: $tablet-width) {
     background-color: $white;
@@ -55,6 +63,10 @@
   opacity: 0.7;
   color: $white;
   position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &::after {
     @media (max-width: $tablet-width) {
@@ -84,8 +96,24 @@
   display: flex;
   align-items: center;
 
+  &:nth-of-type(1) {
+    margin-left: 21px;
+  }
+
+  &:not(:nth-of-type(1)) {
+    margin-left: 135px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 100%;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &:not(:nth-of-type(1)) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -99,6 +127,10 @@
   position: relative;
   display: none;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -106,8 +138,8 @@
     left: 14px;
     width: 23px;
     height: 1px;
-    background-color: $grey2;
-    box-shadow: 0 6px 0 0 $grey2, 0 12px 0 0 $grey2;
+    background-color: $black;
+    box-shadow: 0 6px 0 0 $black, 0 12px 0 0 $black;
 
     @media (max-width: $mobile-width) {
       left: 14px;
