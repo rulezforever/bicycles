@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  flex: 0 0 auto;
 }
 
 .page-footer__title {
@@ -84,6 +85,7 @@
   align-content: center;
   align-items: center;
   padding-bottom: 92px;
+  justify-content: space-between;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 45px;
@@ -120,7 +122,7 @@
   color: $black;
   position: relative;
   padding-left: 32px;
-  margin-left: 95px;
+  padding-right: 16px;
 
   &:hover {
     opacity: 1;
@@ -144,4 +146,10 @@
   top: 0;
   left: -5px;
   fill: transparent;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
