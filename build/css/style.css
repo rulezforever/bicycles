@@ -126,7 +126,8 @@ img {
       background-image: url("../img/bicycle-mobile@2x.jpg"); } }
 
 .page-container--menu-opened::before {
-  background-image: none; }
+  background-image: none;
+  background-color: white; }
 
 .page-main {
   flex: 1 0 auto; }
@@ -345,10 +346,18 @@ img {
       display: none;
       gap: 135px;
       padding: 0;
-      border: none; } }
-  @media (max-width: 1023px) {
+      border: none;
+      position: fixed;
+      top: 50px;
+      right: 0;
+      width: 100%;
+      z-index: 2;
+      background-color: white;
+      padding-bottom: 135px; } }
+  @media (max-width: 767px) {
     .main-nav__list {
-      background-color: white; } }
+      top: 100px;
+      gap: 27px; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -366,11 +375,16 @@ img {
       position: absolute;
       width: 12px;
       height: 12px;
-      right: 10px;
+      right: 30px;
       top: 25px;
       border-right: 3px solid rgba(44, 46, 63, 0.5);
       border-bottom: 3px solid rgba(44, 46, 63, 0.5);
       transform: rotate(-45deg); } }
+  @media (max-width: 767px) {
+    .main-nav__item a::after {
+      height: 7px;
+      width: 7px;
+      right: 30px; } }
   @media (max-width: 1023px) {
     .main-nav__item a {
       font-size: 20px;
@@ -746,9 +760,10 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: 280px; }
+  margin-left: 20em; }
   @media (max-width: 1023px) {
     .promo__header {
+      margin-left: 0;
       padding: 0;
       width: 100%;
       align-content: center; } }

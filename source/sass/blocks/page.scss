@@ -53,6 +53,7 @@
   &--menu-opened {
     &::before {
       background-image: none;
+      background-color: $white;
     }
   }
 }
