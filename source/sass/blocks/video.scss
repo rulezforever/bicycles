@@ -1,15 +1,4 @@
 .video {
-  @media (max-width: $tablet-width) {
-    height: 508px;
-    margin-bottom: 40px;
-  }
-
-  @media (max-width: $mobile-width) {
-    height: 450px;
-  }
-}
-
-.video .wrapper {
   color: $white;
   letter-spacing: -0.5%;
   background-image: linear-gradient(to bottom, $black3, 706px, transparent 706px);
@@ -26,12 +15,20 @@
     padding-top: 70px;
     margin-bottom: 0;
     min-width: auto;
+    min-height: 508px;
+    height: 548px;
   }
 
   @media (max-width: $mobile-width) {
     background-image: linear-gradient(to bottom, $black3, 384px, transparent 384px);
     padding-top: 85px;
+    min-height: 450px;
+    height: 486px;
   }
+}
+
+.video .wrapper {
+  margin: 0 auto;
 }
 
 .video__title {
