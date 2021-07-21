@@ -350,8 +350,9 @@ img {
       position: fixed;
       top: 50px;
       right: 0;
-      width: 100%;
-      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      z-index: 3;
       background-color: white;
       padding-bottom: 135px; } }
   @media (max-width: 767px) {
