@@ -1,55 +1,55 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-light.woff2") format("woff2");
+  src: url("../../fonts/opensans-light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-light.woff") format("woff");
+  src: url("../../fonts/opensans-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-regular.woff2") format("woff2");
+  src: url("../../fonts/opensans-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-regular.woff") format("woff");
+  src: url("../../fonts/opensans-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-semibold.woff2") format("woff2");
+  src: url("../../fonts/opensans-semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-semibold.woff") format("woff");
+  src: url("../../fonts/opensans-semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-bold.woff2") format("woff2");
+  src: url("../../fonts/opensans-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans-bold.woff") format("woff");
+  src: url("../../fonts/opensans-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
@@ -122,7 +122,7 @@ img {
     .page-container::before {
       background-image: url("../img/bicycle-mobile@2x.jpg"); } }
 
-.page-container--menu-opened::before {
+.page-container--menu-opened::before, .page-container--nojs::before {
   background-image: none;
   background-color: white; }
 
@@ -345,9 +345,6 @@ img {
       gap: 135px;
       padding: 0;
       border: none;
-      position: fixed;
-      top: 50px;
-      right: 0;
       width: 100vw;
       height: 100vh;
       z-index: 3;
@@ -355,8 +352,9 @@ img {
       padding-bottom: 135px; } }
   @media (max-width: 767px) {
     .main-nav__list {
-      top: 100px;
-      gap: 27px; } }
+      top: 33px;
+      gap: 0;
+      padding-bottom: 204px; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -383,7 +381,7 @@ img {
     .main-nav__item a::after {
       height: 7px;
       width: 7px;
-      right: 30px; } }
+      right: 25px; } }
   @media (max-width: 1023px) {
     .main-nav__item a {
       font-size: 20px;
@@ -437,7 +435,6 @@ img {
     .main-nav__toggle {
       display: block; } }
 
-.main-nav--nojs .main-nav__list,
 .main-nav--opened .main-nav__list {
   display: flex; }
 
@@ -450,7 +447,7 @@ img {
     content: "";
     position: absolute;
     top: 25px;
-    right: 0;
+    left: 10px;
     width: 30px;
     height: 1px;
     background-color: rgba(20, 21, 23, 0.2);
@@ -461,7 +458,7 @@ img {
     content: "";
     position: absolute;
     top: 25px;
-    right: 5px;
+    right: 10px;
     width: 30px;
     height: 1px;
     background-color: rgba(20, 21, 23, 0.2);
@@ -470,6 +467,11 @@ img {
 .main-nav--opened .page-header__logo,
 .main-nav--nojs .page-header__logo {
   display: none; }
+
+.main-nav--nojs .main-nav__list {
+  top: 33px;
+  display: flex;
+  position: relative; }
 
 .facts {
   width: 100%;
@@ -799,7 +801,8 @@ img {
       margin-bottom: 30px; } }
   @media (max-width: 767px) {
     .promo__selection-title {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      width: 97%; } }
 
 .promo__input {
   height: 48px;
@@ -807,7 +810,9 @@ img {
   border: 1px solid #c9ccd4;
   box-sizing: border-box;
   border-radius: 6px;
-  text-indent: 30px; }
+  text-indent: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
   @media (max-width: 1023px) {
     .promo__input {
       text-indent: 24px;
@@ -981,10 +986,10 @@ img {
           border: 13px solid #0ad9c6;
           top: -21px;
           right: -25px; } }
-      @media (max-width: 1023px) {
+      @media (max-width: 767px) {
         .kinds__item:nth-of-type(3)::before {
           top: -20px;
-          right: -25px; } }
+          right: -14px; } }
 
 .kinds__name {
   font-size: 22px;

@@ -7,10 +7,12 @@
   navMain.classList.remove('main-nav--nojs');
   navMain.classList.remove('main-nav--opened');
   pageContainer.classList.remove('page-container--menu-opened');
+  pageContainer.classList.remove('page-container--nojs');
 
   navToggle.addEventListener('click', function () {
     navMain.classList.toggle('main-nav--opened');
     pageContainer.classList.toggle('page-container--menu-opened');
+    pageContainer.classList.toggle('page-container--nojs');
   });
 
 

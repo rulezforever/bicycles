@@ -47,7 +47,8 @@
     }
   }
 
-  &--menu-opened {
+  &--menu-opened,
+  &--nojs {
     &::before {
       background-image: none;
       background-color: $white;

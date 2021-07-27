@@ -118,6 +118,7 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 20px;
+    width: 97%;
   }
 }
 
@@ -128,6 +129,8 @@
   box-sizing: border-box;
   border-radius: 6px;
   text-indent: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (max-width: $tablet-width) {
     text-indent: 24px;
