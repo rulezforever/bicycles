@@ -222,7 +222,7 @@ img {
   .page-footer__image {
     padding: 0 35px;
     box-sizing: border-box;
-    width: 100%;
+    width: 99vw;
     height: 545px; } }
 
 @media (max-width: 767px) {
@@ -334,11 +334,12 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 874px;
   position: relative;
   box-sizing: border-box;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: flex-start;
+  padding-left: 18px; }
   @media (max-width: 1023px) {
     .main-nav__list {
       display: none;
@@ -349,10 +350,13 @@ img {
       height: 100vh;
       z-index: 3;
       background-color: white;
-      padding-bottom: 135px; } }
+      padding-bottom: 135px;
+      position: fixed;
+      right: 0;
+      top: 50px; } }
   @media (max-width: 767px) {
     .main-nav__list {
-      top: 33px;
+      top: 85px;
       gap: 0;
       padding-bottom: 204px; } }
 
@@ -395,18 +399,12 @@ img {
 
 .main-nav__item {
   display: flex;
-  align-items: center; }
-  .main-nav__item:nth-of-type(1) {
-    margin-left: 21px; }
-  .main-nav__item:not(:nth-of-type(1)) {
-    margin-left: 135px; }
+  align-items: center;
+  margin-right: 135px; }
   @media (max-width: 1023px) {
     .main-nav__item {
-      width: 100%; }
-      .main-nav__item:nth-of-type(1) {
-        margin-left: 0; }
-      .main-nav__item:not(:nth-of-type(1)) {
-        margin-left: 0; } }
+      width: 100%;
+      margin-right: 0; } }
 
 .main-nav__toggle {
   width: 50px;
@@ -692,7 +690,6 @@ img {
   color: white;
   display: flex;
   flex-wrap: wrap;
-  gap: 170px;
   margin: 240px auto; }
   @media (max-width: 1023px) {
     .promo {
@@ -749,11 +746,13 @@ img {
 .promo__selection {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: 11vw; }
   @media (max-width: 1023px) {
     .promo__selection {
       width: 100%;
-      align-items: center; } }
+      align-items: center;
+      margin-left: 0; } }
 
 .promo__header {
   display: flex;
