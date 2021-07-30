@@ -358,7 +358,8 @@ img {
     .main-nav__list {
       top: 85px;
       gap: 0;
-      padding-bottom: 204px; } }
+      padding-bottom: 204px;
+      overflow-y: auto; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -575,8 +576,7 @@ img {
   box-sizing: border-box;
   padding-top: 120px;
   margin-bottom: 55px;
-  width: 100%;
-  min-width: 1440px; }
+  width: 100%; }
   @media (max-width: 1023px) {
     .video {
       background-image: linear-gradient(to bottom, #131314, 413px, transparent 413px);
