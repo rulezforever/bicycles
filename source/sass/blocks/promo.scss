@@ -2,7 +2,8 @@
   color: $white;
   display: flex;
   flex-wrap: wrap;
-  margin: 240px auto;
+  margin: 0 auto 240px;
+  width: 902px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -60,7 +61,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 11vw;
+  margin-left: 11.8vw;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -74,13 +75,16 @@
   flex-wrap: wrap;
   flex-direction: column;
   box-sizing: border-box;
-  margin-left: 20em;
+  // margin-left: 20em;
+  // margin: 0 auto;
+  padding-left: 20px;
 
   @media (max-width: $tablet-width) {
     margin-left: 0;
     padding: 0;
     width: 100%;
     align-content: center;
+    padding-left: 0;
   }
 }
 
