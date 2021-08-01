@@ -317,7 +317,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: 282px;
+  margin: 0 auto;
   min-height: 75px; }
   .main-nav--opened {
     flex-direction: column; }
@@ -343,7 +343,7 @@ img {
   @media (max-width: 1023px) {
     .main-nav__list {
       display: none;
-      gap: 135px;
+      gap: 80px;
       padding: 0;
       border: none;
       width: 100vw;
@@ -358,8 +358,7 @@ img {
     .main-nav__list {
       top: 85px;
       gap: 0;
-      padding-bottom: 204px;
-      overflow-y: auto; } }
+      padding-bottom: 204px; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -401,11 +400,16 @@ img {
 .main-nav__item {
   display: flex;
   align-items: center;
-  margin-right: 135px; }
+  margin-right: 9.4vw; }
+  .main-nav__item:nth-of-type(4) {
+    margin-right: 20px; }
   @media (max-width: 1023px) {
     .main-nav__item {
       width: 100%;
       margin-right: 0; } }
+  @media (max-width: 767px) {
+    .main-nav__item {
+      margin-bottom: 28px; } }
 
 .main-nav__toggle {
   width: 50px;
@@ -435,7 +439,9 @@ img {
       display: block; } }
 
 .main-nav--opened .main-nav__list {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px; }
 
 .main-nav--opened .main-nav__toggle,
 .main-nav--nojs .main-nav__toggle {
@@ -496,8 +502,7 @@ img {
   width: 81%;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  min-width: 1200px; }
+  justify-content: center; }
   @media (max-width: 1023px) {
     .facts__list {
       width: 73%;
@@ -690,7 +695,8 @@ img {
   color: white;
   display: flex;
   flex-wrap: wrap;
-  margin: 240px auto; }
+  margin: 0 auto 240px;
+  justify-content: center; }
   @media (max-width: 1023px) {
     .promo {
       flex-direction: column;
@@ -747,7 +753,7 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 11vw; }
+  margin-left: 12vw; }
   @media (max-width: 1023px) {
     .promo__selection {
       width: 100%;
@@ -758,8 +764,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  box-sizing: border-box;
-  margin-left: 20em; }
+  box-sizing: border-box; }
   @media (max-width: 1023px) {
     .promo__header {
       margin-left: 0;
@@ -857,8 +862,7 @@ img {
   background-color: #f6f7f9;
   padding-top: 150px;
   padding-bottom: 147px;
-  width: 100%;
-  min-width: 1440px; }
+  width: 100%; }
   @media (max-width: 1023px) {
     .kinds {
       padding-top: 50px;

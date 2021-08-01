@@ -2,7 +2,8 @@
   color: $white;
   display: flex;
   flex-wrap: wrap;
-  margin: 240px auto;
+  margin: 0 auto 240px;
+  justify-content: center;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -60,7 +61,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 11vw;
+  margin-left: 12vw;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -74,7 +75,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   box-sizing: border-box;
-  margin-left: 20em;
+  // margin-left: 20em;
 
   @media (max-width: $tablet-width) {
     margin-left: 0;
