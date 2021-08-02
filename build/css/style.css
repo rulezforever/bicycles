@@ -318,7 +318,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
-  padding-left: 15px;
   min-height: 75px; }
   .main-nav--opened {
     flex-direction: column; }
@@ -345,7 +344,7 @@ img {
   @media (max-width: 1023px) {
     .main-nav__list {
       display: none;
-      gap: 135px;
+      gap: 80px;
       padding: 0;
       border: none;
       width: 100vw;
@@ -360,8 +359,7 @@ img {
     .main-nav__list {
       top: 85px;
       gap: 0;
-      padding-bottom: 204px;
-      overflow-y: auto; } }
+      padding-bottom: 204px; } }
 
 .main-nav__item a {
   font-size: 16px;
@@ -405,11 +403,14 @@ img {
   align-items: center;
   margin-right: 9.4vw; }
   .main-nav__item:nth-of-type(4) {
-    margin-right: 22px; }
+    margin-right: 20px; }
   @media (max-width: 1023px) {
     .main-nav__item {
       width: 100%;
       margin-right: 0; } }
+  @media (max-width: 767px) {
+    .main-nav__item {
+      margin-bottom: 28px; } }
 
 .main-nav__toggle {
   width: 50px;
@@ -439,7 +440,9 @@ img {
       display: block; } }
 
 .main-nav--opened .main-nav__list {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px; }
 
 .main-nav--opened .main-nav__toggle,
 .main-nav--nojs .main-nav__toggle {
@@ -500,8 +503,7 @@ img {
   width: 81%;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  min-width: 1200px; }
+  justify-content: center; }
   @media (max-width: 1023px) {
     .facts__list {
       width: 73%;
@@ -695,7 +697,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto 240px;
-  width: 902px; }
+  justify-content: center; }
   @media (max-width: 1023px) {
     .promo {
       flex-direction: column;
@@ -752,7 +754,7 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 11.8vw; }
+  margin-left: 12vw; }
   @media (max-width: 1023px) {
     .promo__selection {
       width: 100%;
@@ -763,8 +765,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  box-sizing: border-box;
-  padding-left: 20px; }
+  box-sizing: border-box; }
   @media (max-width: 1023px) {
     .promo__header {
       margin-left: 0;

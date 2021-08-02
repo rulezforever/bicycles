@@ -3,6 +3,7 @@
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
   var pageContainer = document.querySelector('.page-container');
+  var pageBody = document.querySelector('.page-body');
 
   navMain.classList.remove('main-nav--nojs');
   navMain.classList.remove('main-nav--opened');
@@ -13,8 +14,12 @@
     navMain.classList.toggle('main-nav--opened');
     pageContainer.classList.toggle('page-container--menu-opened');
     pageContainer.classList.toggle('page-container--nojs');
+    if (navMain.classList.contains('main-nav--opened')) {
+      pageBody.style.overflow = "hidden";
+    } else {
+      pageBody.style.overflow = "auto";
+    }
   });
-
 
   // slow scroll for links
 
