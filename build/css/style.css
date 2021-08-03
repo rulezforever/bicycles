@@ -900,6 +900,9 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px; }
+  @media (max-width: 1023px) {
+    .kinds__list {
+      padding: 0 57px; } }
   @media (max-width: 767px) {
     .kinds__list {
       gap: 40px; } }
